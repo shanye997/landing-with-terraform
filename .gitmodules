@@ -532,3 +532,6 @@
 [submodule "modules/terraform-alicloud-alb"]
 	path = modules/terraform-alicloud-alb
 	url = git@github.com:terraform-alicloud-modules/terraform-alicloud-alb.git
+[submodule "provider/terraform-provider-alicloud"]
+	path = provider/terraform-provider-alicloud
+	url = git@github.com:aliyun/terraform-provider-alicloud.git

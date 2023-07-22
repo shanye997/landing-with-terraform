@@ -1,5 +1,8 @@
 #! /bin/bash
+# add provider
+git submodule add git@github.com:aliyun/terraform-provider-alicloud.git provider/terraform-provider-alicloud
 
+# add modules
 namespaces=(aliyun alibaba terraform-alicloud-modules)
 next_offset=0
 for np in ${namespaces[@]};
