@@ -1,0 +1,4 @@
+variable "config_var" {
+  default = "{\\\"headersToDownstreamOnDeny\\\":[\\\"content-type\\\",\\\"set-cookie\\\"],\\\"headersToUpstreamOnAllow\\\":[\\\"authorization\\\",\\\"cookie\\\",\\\"path\\\",\\\"x-auth-request-access-token\\\",\\\"x-forwarded-access-token\\\"],\\\"includeRequestHeadersInCheck\\\":[\\\"cookie\\\",\\\"x-forward-access-token\\\"],\\\"oidc\\\":{\\\"clientID\\\":\\\"qweqweqwewqeqwe\\\",\\\"clientSecret\\\":\\\"asdasdasdasdsadas\\\",\\\"cookieExpire\\\":\\\"1000\\\",\\\"cookieRefresh\\\":\\\"500\\\",\\\"cookieSecret\\\":\\\"scxzcxzcxzcxzcxz\\\",\\\"issuerURI\\\":\\\"qweqwewqeqweqweqwe\\\",\\\"redirectDomain\\\":\\\"www.alicloud-provider.cn\\\",\\\"redirectProtocol\\\":\\\"http\\\",\\\"scopes\\\":[\\\"profile\\\"]},\\\"port\\\":4180,\\\"service\\\":\\\"asm-oauth2proxy-httpextauth-tf-example-name77777.istio-system.svc.cluster.local\\\",\\\"timeout\\\":\\\"20s\\\"}"
+}
+
