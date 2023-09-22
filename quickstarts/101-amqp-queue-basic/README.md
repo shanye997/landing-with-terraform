@@ -1,0 +1,21 @@
+<!-- BEGIN_TF_DOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_amqp_queue.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/amqp_queue) | resource |
+| [alicloud_amqp_virtual_host.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/amqp_virtual_host) | resource |
+| [alicloud_amqp_instances.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/amqp_instances) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-example-AmqpQueuebasic4495924233947507507"` | no |
+<!-- END_TF_DOCS -->    

@@ -1,0 +1,18 @@
+<!-- BEGIN_TF_DOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_oos_execution.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/oos_execution) | resource |
+| [alicloud_oos_template.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/oos_template) | resource |
+
+## Inputs
+
+No inputs.
+<!-- END_TF_DOCS -->    
