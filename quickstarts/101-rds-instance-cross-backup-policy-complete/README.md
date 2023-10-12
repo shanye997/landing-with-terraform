@@ -1,0 +1,27 @@
+<!-- BEGIN_TF_DOCS -->
+## Providers
+
+| Name | Version |
+|------|---------|
+| <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+
+## Resources
+
+| Name | Type |
+|------|------|
+| [alicloud_db_instance.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/db_instance) | resource |
+| [alicloud_rds_instance_cross_backup_policy.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/resources/rds_instance_cross_backup_policy) | resource |
+| [alicloud_db_instance_classes.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/db_instance_classes) | data source |
+| [alicloud_db_zones.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/db_zones) | data source |
+| [alicloud_rds_cross_regions.regions](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/rds_cross_regions) | data source |
+| [alicloud_vpcs.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/vpcs) | data source |
+| [alicloud_vswitches.default](https://registry.terraform.io/providers/hashicorp/alicloud/latest/docs/data-sources/vswitches) | data source |
+
+## Inputs
+
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_log_backup_enabled_var"></a> [log\_backup\_enabled\_var](#input\_log\_backup\_enabled\_var) | n/a | `string` | `"Enable"` | no |
+| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | `"tf-exampleRdsCrossBackupPolicy"` | no |
+| <a name="input_retention_var"></a> [retention\_var](#input\_retention\_var) | n/a | `string` | `"30"` | no |
+<!-- END_TF_DOCS -->    
