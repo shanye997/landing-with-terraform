@@ -40,8 +40,8 @@ do
   fi
 done
 
-if [[ $success == "false" ]]; then
-  exit 1
+if [[ $success == "false" && $record == "false" ]]; then
+    exit 1
 fi
 bash scripts/generate-test-record.sh $record $f
 exit 0

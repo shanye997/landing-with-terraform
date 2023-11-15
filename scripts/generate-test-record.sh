@@ -4,13 +4,12 @@ if [ "$1" == "false" ];then
   exit 0
 fi
 
-$f=$2
 success=true
 if [ -n "$3" ] ;then
   success=false
 fi
 
-fileName=$(basename $f)
+fileName=$(basename $2)
 testRecordFile=TestRecord/$fileName/TestRecord.md.tmp
 if [ ! -d "TestRecord/${fileName}" ]; then
   mkdir -p TestRecord/$fileName
