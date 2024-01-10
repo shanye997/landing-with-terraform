@@ -10,3 +10,5 @@ resource "alicloud_vpc" "default" {
   vpc_name    = var.name
   enable_ipv6 = true
 }
+
+//test
