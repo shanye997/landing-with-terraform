@@ -1,5 +1,5 @@
 variable "name" {
-  default = "terraform-example"
+  default = "tf-example"
 }
 provider "alicloud" {
   region = "cn-hangzhou"
@@ -10,12 +10,11 @@ data "alicloud_zones" "default" {
 }
 
 data "alicloud_vpcs" "default" {
-  name_regex = var.name
+  name_regex = "^default-NODELETING$"
 }
-
 data "alicloud_vswitches" "default" {
   vpc_id  = data.alicloud_vpcs.default.ids.0
-  zone_id = "cn-hangzhou-k"
+  zone_id = data.alicloud_zones.default.ids.0
 }
 
 resource "alicloud_vpn_gateway" "foo" {

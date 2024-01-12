@@ -2,7 +2,7 @@ variable "name" {
   default = "tf_example"
 }
 variable "domain_name" {
-  default = "tf-example.com"
+  default = "example.com"
 }
 
 resource "alicloud_dcdn_domain" "example" {

@@ -37,12 +37,7 @@ resource "alicloud_alidns_address_pool" "default" {
   lba_strategy      = "RATIO"
   type              = "IPV4"
   address {
-    attribute_info = <<EOF
-    {
-      "lineCodeRectifyType": "RECTIFIED",
-      "lineCodes": ["os_namerica_us"]
-    }
-    EOF
+    attribute_info = "{\"lineCodeRectifyType\":\"RECTIFIED\",\"lineCodes\":[\"os_namerica_us\"]}"
     remark         = "address_remark"
     address        = "1.1.1.1"
     mode           = "SMART"

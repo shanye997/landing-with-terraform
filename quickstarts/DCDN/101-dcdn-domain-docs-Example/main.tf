@@ -1,5 +1,5 @@
 variable "domain_name" {
-  default = "tf-example.com"
+  default = "example.com"
 }
 resource "alicloud_dcdn_domain" "example" {
   domain_name = var.domain_name
