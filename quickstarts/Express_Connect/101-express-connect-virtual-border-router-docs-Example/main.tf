@@ -1,6 +1,3 @@
-provider "alicloud" {
-  region = "cn-hangzhou"
-}
 variable "name" {
   default = "tf-example"
 }

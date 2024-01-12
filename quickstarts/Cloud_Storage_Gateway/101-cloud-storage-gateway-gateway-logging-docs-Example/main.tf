@@ -12,7 +12,6 @@ resource "alicloud_log_project" "default" {
   name        = substr("tf-example-${replace(random_uuid.default.result, "-", "")}", 0, 16)
   description = "terraform-example"
 }
-
 resource "alicloud_log_store" "default" {
   project               = alicloud_log_project.default.name
   name                  = var.name
