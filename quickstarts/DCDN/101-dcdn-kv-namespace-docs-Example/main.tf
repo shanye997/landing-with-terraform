@@ -1,5 +1,5 @@
 variable "name" {
-  default = "terraform-example"
+  default = "tf-example"
 }
 resource "alicloud_dcdn_kv_namespace" "default" {
   description = var.name
