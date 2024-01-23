@@ -1,3 +1,6 @@
+variable "name" {
+  default = "terraform-example"
+}
 
 data "alicloud_ros_regions" "example" {}
 

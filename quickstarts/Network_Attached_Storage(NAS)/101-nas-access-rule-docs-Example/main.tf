@@ -11,4 +11,3 @@ resource "alicloud_nas_access_rule" "foo" {
   user_access_type  = "no_squash"
   priority          = 2
 }
-

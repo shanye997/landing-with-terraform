@@ -1,3 +1,6 @@
+provider "alicloud" {
+  region = "cn-beijing"
+}
 variable "name" {
   default = "tf-example"
 }
@@ -25,13 +28,14 @@ resource "alicloud_eci_container_group" "default" {
   restart_policy       = "OnFailure"
   security_group_id    = alicloud_security_group.default.id
   vswitch_id           = alicloud_vswitch.default.id
+  auto_create_eip      = true
   tags = {
     Created = "TF",
     For     = "example",
   }
 
   containers {
-    image             = "registry-vpc.cn-beijing.aliyuncs.com/eci_open/nginx:alpine"
+    image             = "registry.cn-beijing.aliyuncs.com/eci_open/nginx:alpine"
     name              = "nginx"
     working_dir       = "/tmp/nginx"
     image_pull_policy = "IfNotPresent"
@@ -70,14 +74,9 @@ resource "alicloud_eci_container_group" "default" {
       }
     }
   }
-  containers {
-    image    = "registry-vpc.cn-beijing.aliyuncs.com/eci_open/centos:7"
-    name     = "centos"
-    commands = ["/bin/sh", "-c", "sleep 9999"]
-  }
   init_containers {
     name              = "init-busybox"
-    image             = "registry-vpc.cn-beijing.aliyuncs.com/eci_open/busybox:1.30"
+    image             = "registry.cn-beijing.aliyuncs.com/eci_open/busybox:1.30"
     image_pull_policy = "IfNotPresent"
     commands          = ["echo"]
     args              = ["hello initcontainer"]

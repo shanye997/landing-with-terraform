@@ -1,3 +1,7 @@
+variable "name" {
+  default = "terraform-example"
+}
+
 data "alicloud_resource_manager_resource_groups" "default" {
   status = "OK"
 }

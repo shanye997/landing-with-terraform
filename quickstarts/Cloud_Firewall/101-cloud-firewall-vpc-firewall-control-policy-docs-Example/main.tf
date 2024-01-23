@@ -1,3 +1,7 @@
+variable "name" {
+  default = "terraform-example"
+}
+
 data "alicloud_account" "default" {
 }
 

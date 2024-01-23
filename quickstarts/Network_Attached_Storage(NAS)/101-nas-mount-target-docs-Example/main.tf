@@ -1,4 +1,3 @@
-
 data "alicloud_nas_zones" "default" {
   file_system_type = "extreme"
 }

@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-beijing"
+}
+
 resource "alicloud_api_gateway_group" "example" {
   name        = "tf-example"
   description = "tf-example"

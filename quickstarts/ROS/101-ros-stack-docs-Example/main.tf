@@ -16,4 +16,3 @@ resource "alicloud_ros_stack" "example" {
     }
     EOF
 }
-
