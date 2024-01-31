@@ -1,5 +1,14 @@
-resource "alicloud_vpn_customer_gateway" "foo" {
-  name        = "vpnCgwNameExample"
-  ip_address  = "43.104.22.228"
-  description = "vpnCgwDescriptionExample"
+variable "name" {
+  default = "terraform-example"
+}
+
+provider "alicloud" {
+  region = "ap-southeast-2"
+}
+
+resource "alicloud_vpn_customer_gateway" "default" {
+  description           = var.name
+  ip_address            = "4.3.2.10"
+  asn                   = "1219002"
+  customer_gateway_name = var.name
 }

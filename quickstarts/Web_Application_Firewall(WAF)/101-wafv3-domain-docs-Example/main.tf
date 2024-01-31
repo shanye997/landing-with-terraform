@@ -1,6 +1,3 @@
-variable "name" {
-  default = "terraform-example"
-}
 data "alicloud_wafv3_instances" "default" {}
 
 resource "alicloud_ssl_certificates_service_certificate" "default" {

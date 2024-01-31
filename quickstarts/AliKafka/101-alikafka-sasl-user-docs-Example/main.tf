@@ -1,6 +1,7 @@
 variable "name" {
   default = "tf-example"
 }
+
 data "alicloud_zones" "default" {
   available_resource_creation = "VSwitch"
 }
@@ -30,15 +31,13 @@ resource "alicloud_alikafka_instance" "default" {
   io_max          = "20"
   spec_type       = "professional"
   service_version = "2.2.0"
-  config          = "{\"enable.acl\":\"true\"}"
   vswitch_id      = alicloud_vswitch.default.id
   security_group  = alicloud_security_group.default.id
-}
-
-resource "alicloud_alikafka_topic" "default" {
-  instance_id = alicloud_alikafka_instance.default.id
-  topic       = "example-topic"
-  remark      = "topic-remark"
+  config          = <<EOF
+  {
+    "enable.acl": "true"
+  }
+  EOF
 }
 
 resource "alicloud_alikafka_sasl_user" "default" {

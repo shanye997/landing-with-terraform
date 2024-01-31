@@ -1,6 +1,3 @@
-variable "name" {
-  default = "terraform-example"
-}
 resource "alicloud_cen_instance" "default" {
   cen_instance_name = var.name
 }
@@ -11,7 +8,7 @@ resource "alicloud_cen_transit_router" "default" {
 }
 data "alicloud_cen_transit_router_available_resources" "default" {}
 resource "alicloud_vpn_customer_gateway" "default" {
-  name        = var.name
+  name        = "${var.name}"
   ip_address  = "42.104.22.210"
   asn         = "45014"
   description = "testAccVpnConnectionDesc"
