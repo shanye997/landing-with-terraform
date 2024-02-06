@@ -1,5 +1,9 @@
+provider "alicloud" {
+  region = "cn-shanghai"
+}
+
 variable "name" {
-  default = "tf-testacc-fnfflow"
+  default = "tf-example-fnfflow"
 }
 
 resource "alicloud_ram_role" "default" {

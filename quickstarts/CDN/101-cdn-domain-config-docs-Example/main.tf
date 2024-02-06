@@ -1,6 +1,11 @@
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 # Create a new Domain config.
 resource "alicloud_cdn_domain_new" "domain" {
-  domain_name = "mycdndomain.alicloud-provider.cn"
+  domain_name = "mycdndomain-${random_integer.default.result}.alicloud-provider.cn"
   cdn_type    = "web"
   scope       = "overseas"
   sources {

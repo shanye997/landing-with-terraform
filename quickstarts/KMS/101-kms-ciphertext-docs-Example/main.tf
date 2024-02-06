@@ -1,6 +1,7 @@
 resource "alicloud_kms_key" "key" {
-  description = "example key"
-  is_enabled  = true
+  description            = "example key"
+  status                 = "Enabled"
+  pending_window_in_days = 7
 }
 
 resource "alicloud_kms_ciphertext" "encrypted" {

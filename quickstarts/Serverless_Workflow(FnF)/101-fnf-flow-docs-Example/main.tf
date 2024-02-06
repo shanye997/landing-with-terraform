@@ -1,5 +1,9 @@
+provider "alicloud" {
+  region = "cn-shanghai"
+}
+
 resource "alicloud_ram_role" "default" {
-  name     = "tf-testacc-fnfflow"
+  name     = "tf-example-fnfflow"
   document = <<EOF
   {
     "Statement": [
@@ -28,6 +32,6 @@ resource "alicloud_fnf_flow" "example" {
   EOF
   role_arn    = alicloud_ram_role.default.arn
   description = "Test for terraform fnf_flow."
-  name        = "tf-testacc-flow"
+  name        = "tf-example-flow"
   type        = "FDL"
 }

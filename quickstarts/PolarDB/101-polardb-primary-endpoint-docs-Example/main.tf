@@ -26,7 +26,6 @@ resource "alicloud_polardb_cluster" "default" {
   description   = "terraform-example"
 }
 
-resource "alicloud_polardb_endpoint" "default" {
+resource "alicloud_polardb_primary_endpoint" "default" {
   db_cluster_id = alicloud_polardb_cluster.default.id
-  endpoint_type = "Custom"
 }

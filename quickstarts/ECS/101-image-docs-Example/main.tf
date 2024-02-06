@@ -38,12 +38,17 @@ resource "alicloud_instance" "default" {
   internet_max_bandwidth_out = 10
 }
 data "alicloud_resource_manager_resource_groups" "default" {}
+
+resource "random_integer" "default" {
+  min = 10000
+  max = 99999
+}
+
 resource "alicloud_image" "default" {
   instance_id       = alicloud_instance.default.id
-  image_name        = "terraform-example"
+  image_name        = "terraform-example-${random_integer.default.result}"
   description       = "terraform-example"
   architecture      = "x86_64"
-  platform          = "CentOS"
   resource_group_id = data.alicloud_resource_manager_resource_groups.default.ids.0
   tags = {
     FinanceDept = "FinanceDeptJoshua"
