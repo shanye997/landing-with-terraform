@@ -9,17 +9,17 @@ resource "random_integer" "default" {
 }
 
 resource "alicloud_log_project" "default" {
-  name = "example-value-${random_integer.default.result}"
+  project_name = "example-value-${random_integer.default.result}"
 }
 
 resource "alicloud_log_store" "default" {
-  project = alicloud_log_project.default.name
-  name    = "example-value"
+  project_name  = alicloud_log_project.default.name
+  logstore_name = "example-value"
 }
 
 resource "alicloud_log_store" "source_store" {
-  project = alicloud_log_project.default.name
-  name    = "example-source-store"
+  project_name  = alicloud_log_project.default.name
+  logstore_name = "example-source-store"
 }
 
 resource "alicloud_ram_role" "default" {

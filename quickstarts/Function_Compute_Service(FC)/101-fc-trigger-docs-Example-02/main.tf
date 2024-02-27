@@ -1,3 +1,7 @@
+provider "alicloud" {
+  region = "cn-hangzhou"
+}
+
 data "alicloud_account" "default" {}
 data "alicloud_regions" "default" {
   current = true
@@ -58,7 +62,7 @@ resource "alicloud_oss_bucket_object" "default" {
 
 resource "alicloud_fc_function" "default" {
   service     = alicloud_fc_service.default.name
-  name        = "terraform-example"
+  name        = "terraform-example-${random_integer.default.result}"
   description = "example"
   oss_bucket  = alicloud_oss_bucket.default.id
   oss_key     = alicloud_oss_bucket_object.default.key

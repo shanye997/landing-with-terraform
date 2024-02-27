@@ -7,6 +7,5 @@ resource "alicloud_nas_file_system" "foo" {
   protocol_type    = "NFS"
   zone_id          = data.alicloud_nas_zones.example.zones[0].zone_id
   storage_type     = "standard"
-  description      = "terraform-example"
   capacity         = "100"
 }

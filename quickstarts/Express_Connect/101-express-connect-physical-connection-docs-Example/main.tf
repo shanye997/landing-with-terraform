@@ -1,3 +1,13 @@
+provider "alicloud" {
+  region = "cn-hangzhou"
+  alias  = "hz"
+}
+
+provider "alicloud" {
+  region = "ap-southeast-1"
+  alias  = "sgp"
+}
+
 resource "alicloud_express_connect_physical_connection" "domestic" {
   access_point_id          = "ap-cn-hangzhou-yh-B"
   line_operator            = "CT"
@@ -7,6 +17,8 @@ resource "alicloud_express_connect_physical_connection" "domestic" {
   description              = "my domestic connection"
   port_type                = "1000Base-LX"
   bandwidth                = 100
+  provider                 = alicloud.hz
+
 }
 
 resource "alicloud_express_connect_physical_connection" "international" {
@@ -18,4 +30,5 @@ resource "alicloud_express_connect_physical_connection" "international" {
   description              = "my domestic connection"
   port_type                = "1000Base-LX"
   bandwidth                = 100
+  provider                 = alicloud.sgp
 }
