@@ -20,6 +20,7 @@ resource "alicloud_vswitch" "default" {
 
 resource "alicloud_cs_serverless_kubernetes" "serverless" {
   name_prefix                    = var.name
+  cluster_spec                   = "ack.pro.small"
   vpc_id                         = alicloud_vpc.default.id
   vswitch_ids                    = [alicloud_vswitch.default.id]
   new_nat_gateway                = true
@@ -35,13 +36,13 @@ resource "alicloud_cs_serverless_kubernetes" "serverless" {
   # Select an existing sls project
   # sls_project_name             = ""
 
-  # tags 
+  # tags
   tags = {
     "k-aa" = "v-aa"
     "k-bb" = "v-aa"
   }
 
-  # addons 
+  # addons
   addons {
     # SLB Ingress
     name = "alb-ingress-controller"

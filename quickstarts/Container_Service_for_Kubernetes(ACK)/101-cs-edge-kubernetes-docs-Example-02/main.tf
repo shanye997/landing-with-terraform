@@ -26,7 +26,6 @@ resource "alicloud_cs_edge_kubernetes" "default" {
   name                         = var.name
   worker_vswitch_ids           = [alicloud_vswitch.default.id]
   worker_instance_types        = [data.alicloud_instance_types.default.instance_types.0.id]
-  version                      = "1.20.11-aliyunedge.1"
   cluster_spec                 = "ack.pro.small"
   worker_number                = "1"
   password                     = "Test12345"
@@ -39,17 +38,10 @@ resource "alicloud_cs_edge_kubernetes" "default" {
   install_cloud_monitor        = "true"
   slb_internet_enabled         = "true"
   is_enterprise_security_group = "true"
-  addons {
-    name   = "alibaba-log-controller"
-    config = "{\"IngressDashboardEnabled\":\"false\"}"
-  }
+
   worker_data_disks {
     category  = "cloud_ssd"
     size      = "200"
     encrypted = "false"
-  }
-  runtime = {
-    name    = "containerd"
-    version = "1.5.10"
   }
 }
