@@ -1,20 +1,26 @@
-<!-- BEGIN_TF_DOCS -->
 ## Introduction
 
 This example is used to create a `alicloud_resource_manager_account` resource.
 
+<!-- BEGIN_TF_DOCS -->
 ## Providers
 
 | Name | Version |
 |------|---------|
 | <a name="provider_alicloud"></a> [alicloud](#provider\_alicloud) | n/a |
+| <a name="provider_random"></a> [random](#provider\_random) | n/a |
+
+## Modules
+
+No modules.
 
 ## Resources
 
 | Name | Type |
 |------|------|
 | [alicloud_resource_manager_account.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_account) | resource |
-| [alicloud_resource_manager_folder.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/resources/resource_manager_folder) | resource |
+| [random_integer.default](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
+| [alicloud_resource_manager_folders.example](https://registry.terraform.io/providers/aliyun/alicloud/latest/docs/data-sources/resource_manager_folders) | data source |
 
 ## Inputs
 
