@@ -16,12 +16,13 @@ resource "alicloud_oss_bucket" "CreateBucket" {
   bucket        = "${var.name}-${random_integer.default.result}"
   lifecycle {
     ignore_changes = [
-      policy,
+      versioning,
     ]
   }
 }
 
-resource "alicloud_oss_bucket_policy" "default" {
-  policy = jsonencode({ "Version" : "1", "Statement" : [{ "Action" : ["oss:PutObject", "oss:GetObject"], "Effect" : "Deny", "Principal" : ["1234567890"], "Resource" : ["acs:oss:*:1234567890:*/*"] }] })
+
+resource "alicloud_oss_bucket_versioning" "default" {
+  status = "Enabled"
   bucket = alicloud_oss_bucket.CreateBucket.bucket
 }
