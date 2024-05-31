@@ -1,0 +1,38 @@
+[
+    {
+        "example_path": "quickstarts/VPC/101-vpc-flow-log-docs-Example",
+        "resource_type": "alicloud_log_project",
+        "resource_name": "alicloud_log_project.example-import",
+        "success": false,
+        "error": "Error: terraformer not support this resourceType: alicloud_log_project.\n",
+        "error_stage": 1,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/VPC/101-vpc-flow-log-docs-Example",
+        "resource_type": "alicloud_log_store",
+        "resource_name": "alicloud_log_store.example-import",
+        "success": false,
+        "error": "Error: terraformer not support this resourceType: alicloud_log_store.\n",
+        "error_stage": 1,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/VPC/101-vpc-flow-log-docs-Example",
+        "resource_type": "alicloud_vpc",
+        "resource_name": "alicloud_vpc.example-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/VPC/101-vpc-flow-log-docs-Example",
+        "resource_type": "alicloud_vpc_flow_log",
+        "resource_name": "alicloud_vpc_flow_log.example-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    }
+]

@@ -1,0 +1,47 @@
+[
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_instance",
+        "resource_name": "alicloud_instance.instance-import",
+        "success": false,
+        "error": "Error: \"secondary_private_ip_address_count\": conflicts with secondary_private_ips\nError: \"ipv6_addresses\": conflicts with ipv6_address_count\nError: expected http_put_response_hop_limit to be in the range (1 - 64), got 0 \nError: \"secondary_private_ips\": conflicts with secondary_private_ip_address_count\nError: \"ipv6_address_count\": conflicts with ipv6_addresses\nError: \"subnet_id\": [REMOVED] Field 'subnet_id' has been removed from version 1.210.0\nError: terraform import pre check failed.\n",
+        "error_stage": 2,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_kms_key",
+        "resource_name": "alicloud_kms_key.key-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_security_group",
+        "resource_name": "alicloud_security_group.group-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_vpc",
+        "resource_name": "alicloud_vpc.vpc-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_vswitch",
+        "resource_name": "alicloud_vswitch.vswitch-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    }
+]

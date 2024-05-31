@@ -1,0 +1,47 @@
+[
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_instance",
+        "resource_name": "alicloud_instance.instance-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_kms_key",
+        "resource_name": "alicloud_kms_key.key-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_security_group",
+        "resource_name": "alicloud_security_group.group-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_vpc",
+        "resource_name": "alicloud_vpc.vpc-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    },
+    {
+        "example_path": "quickstarts/ECS/101-instance-docs-Example",
+        "resource_type": "alicloud_vswitch",
+        "resource_name": "alicloud_vswitch.vswitch-import",
+        "success": true,
+        "error": "",
+        "error_stage": 0,
+        "provider_version": "1.223.2"
+    }
+]
