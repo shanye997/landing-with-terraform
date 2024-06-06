@@ -20,6 +20,8 @@ quickstarts/**/footer.md
 quickstarts/**/plan.tftest.hcl
 quickstarts/**/apply.tftest.hcl
 **/terraform.log
+TestRecordImport/
+TestRecordTfer/
 
 aliyun
 *.tgz
