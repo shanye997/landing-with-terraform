@@ -1,13 +1,32 @@
-resource "alicloud_image_import" "this" {
-  description  = "test import image"
+variable "name" {
+  default = "terraform-image-import-example"
+}
+
+resource "alicloud_oss_bucket" "default" {
+  bucket = var.name
+}
+
+resource "alicloud_oss_bucket_object" "default" {
+  bucket  = alicloud_oss_bucket.default.id
+  key     = "fc/hello.zip"
+  content = <<EOF
+    # -*- coding: utf-8 -*-
+    def handler(event, context):
+    print "hello world"
+    return 'hello world'
+    EOF
+}
+
+resource "alicloud_image_import" "default" {
   architecture = "x86_64"
-  image_name   = "test-import-image"
-  license_type = "Auto"
-  platform     = "Ubuntu"
   os_type      = "linux"
+  platform     = "Ubuntu"
+  license_type = "Auto"
+  image_name   = var.name
+  description  = var.name
   disk_device_mapping {
+    oss_bucket      = alicloud_oss_bucket.default.id
+    oss_object      = alicloud_oss_bucket_object.default.id
     disk_image_size = 5
-    oss_bucket      = "testimportimage"
-    oss_object      = "root.img"
   }
 }
