@@ -1,0 +1,42 @@
+name: Create Pull Request
+
+on:
+  workflow_dispatch:
+
+jobs:
+  create-pr:
+    runs-on: ubuntu-latest
+    permissions: write-all
+
+    steps:
+      - name: checkout
+        uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create new branch
+        run: |
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+          git checkout -b sync
+          echo "Some changes" > myfile.txt  # 此处做你想要更改的操作
+          git add myfile.txt
+          git commit -m "Add myfile.txt"
+        
+
+      - name: Commit & Push changes
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: 'add test'
+          branch: sync
+
+
+      - name: Push changes and create Pull Request
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -X POST -H "Authorization: token $GITHUB_TOKEN" \
+          -d '{"title": "My Pull Request", "head": "sync", "base": "main", "body": "Please pull this in!"}' \
+          https://api.github.com/repos/shanye997/landing-with-terraform/pulls
+
